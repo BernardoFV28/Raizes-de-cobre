@@ -927,7 +927,12 @@ h1, h2, h3 {
     height: 180px;
   }
 
-  .icone,
+  .icone{  
+    flex-direction: column;
+    gap: 4px;
+    left: 10px;
+    bottom: 30px;
+    font-size: 12px;}
   .icone1 {
     flex-direction: column;
     gap: 4px;
