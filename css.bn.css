@@ -902,80 +902,100 @@ h1, h2, h3 {
     font-size: larger;
   }
 /* 🔮 Responsividade mágica */
-@media (max-width: 1024px) {
-    .container,
-    .cardizinho,
-    .Engrenagens,
-    .personagens-container {
-      width: 90%;
-      padding: 15px;
-    }
-  
-    .card {
-      max-width: 100%;
-    }
+/* === RESPONSIVIDADE === */
+
+/* Pequenos aparelhos (smartphones em pé) */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    font-size: 0.95rem;
   }
-  
-  @media (max-width: 768px) {
-    .personagens-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .cardizinho,
-    .Engrenagens {
-      width: 100%;
-      font-size: 1rem;
-    }
-  
-    .bussola {
-      width: 90px;
-      height: 90px;
-    }
-  
-    .bussola div {
-      font-size: 0.9em;
-    }
-  
-    .ponteiro {
-      height: 40%;
-    }
-  
-    h1, h2, h3 {
-      font-size: 1.5em;
-    }
+
+  h2, .campanha h2, .cartadobestiario-title {
+    font-size: 1.4rem;
   }
-  
-  @media (max-width: 480px) {
-    .container,
-    .cardizinho,
-    .Engrenagens,
-    .personagens-container {
-      width: 95%;
-      padding: 10px;
-    }
-  
-    .card {
-      padding: 15px;
-      font-size: 0.95rem;
-    }
-  
-    .btn {
-      font-size: 1em;
-      padding: 8px 16px;
-    }
-  
-    .bussola {
-      width: 70px;
-      height: 70px;
-    }
-  
-    .bussola div {
-      font-size: 0.8em;
-    }
-  
-    .ponteiro {
-      height: 30%;
-    }
+
+  .conteinerzão {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  
+
+  .cartadobestiario-img {
+    height: 180px;
+  }
+
+  .icone,
+  .icone1 {
+    flex-direction: column;
+    gap: 4px;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+  }
+
+  .icone img,
+  .icone1 img {
+    width: 60px;
+    height: 100px;
+  }
+
+  .moeda {
+    width: 100px;
+    height: 100px;
+  }
+
+  .texto-conexao {
+    font-size: 1.2em;
+    bottom: 5%;
+  }
+
+  .mercado {
+    padding: 1rem;
+  }
+
+  .manual-conteudo {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Aparelhos médios (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .conteinerzão {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .icone,
+  .icone1 {
+    font-size: 14px;
+  }
+
+  .moeda {
+    width: 140px;
+    height: 140px;
+  }
+
+  .cartadobestiario-img {
+    height: 200px;
+  }
+
+  .mercado {
+    padding: 1.5rem;
+  }
+}
+
+/* Telas grandes (notebooks e desktops) */
+@media (min-width: 1025px) {
+  .conteinerzão {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .moeda {
+    width: 170px;
+    height: 170px;
+  }
+}
