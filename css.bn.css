@@ -8,6 +8,7 @@ body.site1{
     background-position: center; /* Centraliza a bicha */
     background-repeat: no-repeat; /* Não repete */
     background-attachment: fixed;
+    font-size: clamp(1rem, 2vw, 1.5rem)
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@ body.site1{
     text-align: center;
     color: #fdff95;
     padding: 2rem;
-  font-family: "Cinzel", serif;
+    font-family: "Cinzel", serif;
 
 }
 body.site2{ 
@@ -29,6 +30,7 @@ body.site2{
     background-position: center; /* Centraliza a bicha */
     background-repeat: no-repeat; /* Não repete */
     background-attachment: fixed;
+    font-size: clamp(1rem, 2vw, 1.5rem)
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -41,7 +43,7 @@ body.site2{
     text-align: center;
     color: #fdff95;
     padding: 2rem;
-  font-family: "Cinzel", serif;
+    font-family: "Cinzel", serif;
 
 }
 body.site3{
@@ -50,6 +52,7 @@ body.site3{
     background-position: center; /* Centraliza a bicha */
     background-repeat: no-repeat; /* Não repete */
     background-attachment: fixed;
+    font-size: clamp(1rem, 2vw, 1.5rem)
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -62,7 +65,7 @@ body.site3{
     text-align: center;
     color: #fdff95;
     padding: 2rem;
-  font-family: "Cinzel", serif;
+    font-family: "Cinzel", serif;
 
 }
 .campanha {
