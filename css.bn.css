@@ -989,7 +989,7 @@ h2, .campanha h2, .cartadobestiario-title {
 
 /* ======= RESPONSIVIDADE ======= */
 
-/* PEQUENOS APARELHOS */
+/* TELAS PEQUENAS (MÓVEIS) */
 @media (max-width: 600px) {
   body {
     padding: 1rem;
@@ -1079,42 +1079,3 @@ h2, .campanha h2, .cartadobestiario-title {
   }
 }
 
-/* MÉDIOS APARELHOS (TABLETS) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  body {
-    padding: 1.5rem;
-  }
-
-  .conteinerzão {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
-  .icone, .icone1 {
-    font-size: 0.9rem;
-  }
-
-  .moeda {
-    width: 130px;
-    height: 130px;
-  }
-
-  .cartadobestiario-img {
-    height: 220px;
-  }
-
-  .mercado, .manual-conteudo {
-    padding: 1.2rem;
-  }
-}
-
-/* TELAS GRANDES */
-@media (min-width: 1025px) {
-  .conteinerzão {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .moeda {
-    width: 170px;
-    height: 170px;
-  }
-}
