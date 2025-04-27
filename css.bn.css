@@ -242,38 +242,56 @@ details:not([open]) p {
 
 /* CONTEINERZÃO (Grid de itens) */
 .cardizinho {
-  background: #2c3e50; /* Cor de fundo profunda, pra dar aquele ar vintage e misterioso */
-  color: #ecf0f1; /* Texto em tom suave pra contrastar bem com o fundo escuro */
-  padding: 30px; /* Espaçamento interno, pra dar aquele respiro pro conteúdo */
-  border-radius: 10px; /* Bordas suavizadas, sem perder a robustez */
-  max-width: 800px; /* Limita a largura pra não ficar um texto interminável */
-  margin: 40px auto; /* Centraliza a div na tela com um espaçamento confortável */
-  font-family: 'Georgia', serif; /* Tipografia clássica, dando um ar de livro antigo */
-  font-size: 1.2rem; /* Tamanho de texto que seja agradável para a leitura de grandes blocos */
-  line-height: 1.6; /* Linha espaçada, pra não ficar aquela leitura apertada */
-  text-align: justify; /* Justifica o texto pra um visual mais clássico e elegante */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra suave pra dar destaque e profundidade */
-  border: 2px solid #e67e22; /* Um toque de cobre na borda, pra lembrar o tema */
-  background-image: linear-gradient(45deg, rgba(44, 62, 80, 0.7), rgba(22, 22, 22, 0.7)); /* Um gradiente leve pra dar profundidade */
-  overflow-y: auto; /* Caso o texto ultrapasse a altura, habilita rolagem */
+  background: #2c3e50; /* Fundo escuro, digno de um ambiente de vapor e ferro retorcido */
+  color: #ecf0f1; /* Texto suave, como o brilho da lâmpada de gás iluminando o caminho */
+  padding: 35px 40px; /* Um respiro de cada lado, como se fosse uma carta antiga com espaço para um grande conto */
+  border-radius: 12px; /* Bordas com leve suavidade, mas robustas, como um engrenagem que ainda tem muito pra girar */
+  max-width: 900px; /* Limita a largura, não queremos que o texto fuja das mãos do leitor */
+  margin: 50px auto; /* Centraliza a peça, como um relicário importante dentro de um velho museu */
+  font-family: 'Georgia', serif; /* Tipografia clássica, como se fosse o diário de um explorador */
+  font-size: 1.2rem; /* Perfeito pra longos textos, como se o leitor estivesse virando as páginas de um grimório */
+  line-height: 1.7; /* Espaço entre as linhas, mais arejado, dando mais ritmo à leitura */
+  text-align: justify; /* Justificado, dando aquela simetria clássica dos textos antigos, que não se perdem no papel */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Sombra intensa, como se o texto estivesse emergindo das profundezas das ferrovias */
+  border: 3px solid #c0392b; /* Bordas de cobre, um toque de vermelho enferrujado, pra lembrar o metal que pulsa no coração do jogo */
+  background-image: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(22, 22, 22, 0.85)); /* Gradiente de cobre, com a sensação de algo envelhecido, mas ainda vital */
+  overflow-y: auto; /* Se o texto crescer, que continue fluindo como um rio de ferro e vapor */
 }
 
 .cardizinho p {
-  margin-bottom: 20px; /* Espaço entre parágrafos pra dar aquele respiro entre as ideias */
+  margin-bottom: 25px; /* Espaço entre parágrafos, como se a história tivesse pausas dramáticas para fazer o jogador refletir */
 }
 
 .cardizinho h1, .cardizinho h2 {
-  font-family: 'Roboto Slab', serif; /* Cabeçalhos mais fortes, com uma pegada imponente */
-  color: #e67e22; /* Laranja cobre pra destacar */
+  font-family: 'Roboto Slab', serif; /* Cabeçalhos fortes, como se fossem engrenagens que dão o tom de ordem no caos */
+  color: #d35400; /* Laranja enferrujado, o tom do cobre aquecido nas fornalhas */
 }
 
 .cardizinho a {
-  color: #f39c12; /* Link com cor de cobre dourado, pra dar aquele destaque */
-  text-decoration: none; /* Sem underline, pra um look mais clean */
+  color: #f39c12; /* Links como fios de cobre, chamando atenção, mas de maneira sutil */
+  text-decoration: none; /* Sem underline, mas com aquele charme discreto, como um bilhete secreto */
 }
 
 .cardizinho a:hover {
-  text-decoration: underline; /* Um hover suave com um efeito clean */
+  text-decoration: underline; /* Quando o link for tocado, ele revela um pouco de sua verdade oculta */
+}
+
+.cardizinho::before {
+  content: "⛓️"; /* Uma âncora ou corrente simbólica, como se fosse uma marca do velho mundo industrial */
+  font-size: 2rem;
+  color: #c0392b;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cardizinho::after {
+  content: "⚙️"; /* Um símbolo de engrenagem, porque nada em Raízes de Cobre funciona sem elas */
+  font-size: 2rem;
+  color: #e67e22;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
 }
 
 /* ÍCONES (Com wrapper para melhor organização) */
