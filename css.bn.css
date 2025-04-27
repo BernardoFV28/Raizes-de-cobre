@@ -242,12 +242,38 @@ details:not([open]) p {
 
 /* CONTEINERZÃO (Grid de itens) */
 .cardizinho {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 1rem 0;
-  max-width: 1200px;
-  width: 100%;
+  background: #2c3e50; /* Cor de fundo profunda, pra dar aquele ar vintage e misterioso */
+  color: #ecf0f1; /* Texto em tom suave pra contrastar bem com o fundo escuro */
+  padding: 30px; /* Espaçamento interno, pra dar aquele respiro pro conteúdo */
+  border-radius: 10px; /* Bordas suavizadas, sem perder a robustez */
+  max-width: 800px; /* Limita a largura pra não ficar um texto interminável */
+  margin: 40px auto; /* Centraliza a div na tela com um espaçamento confortável */
+  font-family: 'Georgia', serif; /* Tipografia clássica, dando um ar de livro antigo */
+  font-size: 1.2rem; /* Tamanho de texto que seja agradável para a leitura de grandes blocos */
+  line-height: 1.6; /* Linha espaçada, pra não ficar aquela leitura apertada */
+  text-align: justify; /* Justifica o texto pra um visual mais clássico e elegante */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra suave pra dar destaque e profundidade */
+  border: 2px solid #e67e22; /* Um toque de cobre na borda, pra lembrar o tema */
+  background-image: linear-gradient(45deg, rgba(44, 62, 80, 0.7), rgba(22, 22, 22, 0.7)); /* Um gradiente leve pra dar profundidade */
+  overflow-y: auto; /* Caso o texto ultrapasse a altura, habilita rolagem */
+}
+
+.cardizinho p {
+  margin-bottom: 20px; /* Espaço entre parágrafos pra dar aquele respiro entre as ideias */
+}
+
+.cardizinho h1, .cardizinho h2 {
+  font-family: 'Roboto Slab', serif; /* Cabeçalhos mais fortes, com uma pegada imponente */
+  color: #e67e22; /* Laranja cobre pra destacar */
+}
+
+.cardizinho a {
+  color: #f39c12; /* Link com cor de cobre dourado, pra dar aquele destaque */
+  text-decoration: none; /* Sem underline, pra um look mais clean */
+}
+
+.cardizinho a:hover {
+  text-decoration: underline; /* Um hover suave com um efeito clean */
 }
 
 /* ÍCONES (Com wrapper para melhor organização) */
