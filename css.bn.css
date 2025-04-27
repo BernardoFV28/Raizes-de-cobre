@@ -1,73 +1,87 @@
+/* ======= RESET GERAL E BASE ======= */
 html {
   scroll-behavior: smooth;
 }
 
-body.site1{ 
+body {
+  font-family: "Cinzel", serif;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Ajuste para responsividade da fonte */
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  color: #fdff95;
+}
+
+/* Estilos de fundo específicos para cada site */
+body.site1 {
   background-image: url(images/lendas.png);
-    background-size: cover; /* Faz a imagem cobrir tudo */
-    background-position: center; /* Centraliza a bicha */
-    background-repeat: no-repeat; /* Não repete */
-    background-attachment: fixed;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    color: #fdff95;
-    padding: 2rem;
-    font-family: "Cinzel", serif;
-
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-body.site2{ 
+
+body.site2 {
   background-image: url("images/fundosite2.png");
-    background-size: cover; /* Faz a imagem cobrir tudo */
-    background-position: center; /* Centraliza a bicha */
-    background-repeat: no-repeat; /* Não repete */
-    background-attachment: fixed;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    color: #fdff95;
-    padding: 2rem;
-    font-family: "Cinzel", serif;
-
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-body.site3{
+
+body.site3 {
   background-image: url("images/fundosite3.png");
-    background-size: cover; /* Faz a imagem cobrir tudo */
-    background-position: center; /* Centraliza a bicha */
-    background-repeat: no-repeat; /* Não repete */
-    background-attachment: fixed;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    color: #fdff95;
-    padding: 2rem;
-    font-family: "Cinzel", serif;
-
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+/* Paleta de cores */
+:root {
+  --cor-principal: #121012e3;          /* Cobre envelhecido – o sangue seco das máquinas esquecidas */
+  --cor-secundaria: #1b2c1b;          /* Profundezas ancestrais – onde as sombras sussurram runas perdidas */
+  --cor-destaque: #fff1b9;            /* Ouro sujo – reflexo de engrenagens antigas sob a luz do necrocristal */
+  --cor-acao: #bb4411;                /* Brasa encantada – a fúria do vapor em estado puro */
+  --musgo-antigo: #232e1eee;          /* Verde musgoso – memória viva das florestas que cantavam */
+  --vinho: #3c1818;                  /* Néctar amaldiçoado – essência dos pactos esquecidos */
+  --cor-texto: #b9b8b6;                /* Pó das bibliotecas sagradas – onde a história resiste */
+  --cor-fundo: #00160cee;              /* Abismo arcano – véu da noite em que os autômatos choram */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--cor-fundo);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+  font-family: 'IM Fell English SC', serif;
+  color: var(--cor-destaque);
+  text-shadow: 2px 2px 5px rgba(87, 3, 0, 0.5);
+  text-align: center;
+  margin: 20px auto;
+  max-width: 90%;
+}
+
+h2, .campanha h2, .cartadobestiario-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 1rem;
+}
+
+/* CAMPANHA */
 .campanha {
   background: rgba(20, 20, 20, 0.85);
   margin: 2rem auto;
@@ -79,23 +93,35 @@ body.site3{
 }
 
 .campanha h2 {
-  font-size: 2rem;
   color: #ffe169;
 }
+
+/* MISSÃO */
 .missao {
   background-color: rgba(30, 30, 30, 0.8);
   border-left: 5px solid #cc0000;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
+
+.missao:hover,
+.missao.open {
+  background-color: #3a3a3a;
+}
+
 .missao strong {
   color: #ecdbba;
 }
+
 .objetivo {
   font-style: italic;
   color: #9fe3c3;
 }
 
+/* RODAPÉ */
 footer {
   text-align: center;
   padding: 2rem;
@@ -104,23 +130,23 @@ footer {
   font-size: 0.9rem;
 }
 
-
-
-
-
+/* TEXTO CONEXÃO */
 .texto-conexao {
   color: #b8b8b8;
-  font-size: 2em;
+  font-size: 1.3rem;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
   z-index: 2;
-  position: absolute;
-  bottom: 10%;
+  position: relative;
+  text-align: center;
+  bottom: 10%; /* Ajustado para relative */
   font-family: 'Cursive', sans-serif;
 }
 
 .texto-conexao span {
   color: #32cd32;
 }
+
+/* CARD PEQUENO (Grimório) */
 .cardizinho.grimorio {
   background: radial-gradient(ellipse at center, #2e271f 0%, #1c1a17 100%);
   border: 2px solid #8b6e46;
@@ -136,14 +162,7 @@ footer {
   box-shadow: 0 0 25px rgba(216, 173, 104, 0.6);
 }
 
-h2 {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 2rem;
-  color: #ffcc70;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 2px #000;
-}
-
+/* LISTAS */
 ul {
   margin-top: 1rem;
   padding-left: 1.5rem;
@@ -154,37 +173,41 @@ ul li {
   list-style-type: '🜁 ';
 }
 
+/* PARÁGRAFOS */
 p {
   margin-top: 1rem;
   text-align: justify;
   font-size: 1.1rem;
 }
 
-/* Scroll místico */
+/* SCROLL MÍSTICO */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #1a1816;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #8b6e46;
   border-radius: 5px;
 }
 
-/* Link encantado */
+/* LINK ENCANTADO */
 a {
   color: #d4a94a;
   text-decoration: none;
   border-bottom: 1px dashed #d4a94a;
   transition: 0.3s ease;
 }
+
 a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
 
-/* Detalhes, tipo acordeão */
+/* DETALHES (Acordeão) */
 details {
   background-color: #251f1a;
   border: 1px solid #8b6e46;
@@ -192,6 +215,7 @@ details {
   margin-bottom: 2rem;
   padding: 1rem;
 }
+
 summary {
   cursor: pointer;
   font-weight: bold;
@@ -199,62 +223,82 @@ summary {
   color: #f0cd7c;
   font-family: 'Cinzel Decorative', cursive;
 }
+
 details[open] summary::before {
   content: '📖 ';
 }
+
 details:not([open]) summary::before {
   content: '📕 ';
 }
 
+details[open] p {
+  display: block;
+}
 
-/* trocado de container pra conteinerzão */
+details:not([open]) p {
+  display: none;
+}
+
+/* CONTEINERZÃO (Grid de itens) */
 .conteinerzão {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  gap: 2rem;
+  padding: 1rem 0;
   max-width: 1200px;
   width: 100%;
 }
+
+/* ÍCONES (Com wrapper para melhor organização) */
+.icones-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.icone, .icone1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  background-color: #292929;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  position: fixed; /* Mantendo o posicionamento fixo */
+  z-index: 1000;
+}
+
 .icone {
-  position: fixed;
   bottom: 120px;
   left: 30px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 12px;
-  color: #f4d35e;
-  font-family: 'Cinzel', serif;
-  font-size: 18px;
-  z-index: 1000;
 }
 
 .icone1 {
-  position: fixed;
-  bottom: 5px; /* Mais alto que o .icone */
+  bottom: 5px;
   left: 30px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 10px;
-  border-radius: 12px;
-  color: #f4d35e;
-  font-family: 'Cinzel', serif;
-  font-size: 14px;
-  z-index: 1000;
 }
 
-/* Estilo para as imagens de ícone */
 .icone img,
 .icone1 img {
-  width: 100px;
-  height: 200px;
+  width: 80px;
+  height: auto;
   object-fit: contain;
 }
 
+.img.icone {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  cursor: pointer;
+  left: 30px; /* Mantendo a posição */
+}
 
-/* Estilo das Cartas do Bestiário */
+/* CARTAS DO BESTIÁRIO */
 .cartadobestiario {
   position: relative;
   background: #3b3b3b;
@@ -279,9 +323,10 @@ details:not([open]) summary::before {
 
 .cartadobestiario-img {
   width: 100%;
-  height: 230px;
+  height: 250px;
   object-fit: cover;
   filter: sepia(60%) contrast(1.3) grayscale(40%);
+  border-radius: 0.5rem;
 }
 
 .cartadobestiario-overlay {
@@ -320,7 +365,6 @@ details:not([open]) summary::before {
 }
 
 .cartadobestiario-title {
-  font-size: 1.8rem;
   color: #e0d0a6;
   margin-bottom: 18px;
   text-transform: uppercase;
@@ -382,13 +426,8 @@ details:not([open]) summary::before {
 .cartadobestiario:hover .cartadobestiario-rarity {
   color: #ffcc00;
 }
-.img.icone{
-  width: 70px;
-  height: 70px;
-  background-size: cover;
-  cursor: pointer;
-  left: 30px;
-}
+
+/* MERCADO */
 .mercado {
   max-width: 700px;
   margin: auto;
@@ -396,17 +435,22 @@ details:not([open]) summary::before {
   background: rgba(40, 20, 20, 0.8);
   border: 2px solid #a63f2a;
   box-shadow: 0 0 15px #3c0d0d;
+  border-radius: 1rem;
 }
+
 .item {
   border: 1px solid #622;
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: rgba(60, 30, 30, 0.6);
+  border-radius: 8px;
 }
+
 .item h3 {
   margin: 0;
   color: #ffcf9c;
 }
+
 button {
   background-color: #a63f2a;
   border: none;
@@ -414,20 +458,26 @@ button {
   padding: 0.5rem 1rem;
   margin-top: 0.5rem;
   cursor: pointer;
+  border-radius: 5px;
 }
+
 .moedas {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #ffd;
+  text-align: center;
 }
+
 .moeda {
   width: 170px;
   height: 170px;
   background-image: url('images/moeda.png');
-  background-size: cover;
-  cursor: pointer;
+  background-size: cover;cursor: pointer;
   animation: pulse 2s infinite;
   transition: transform 0.3s;
+  object-fit: contain; /* Garante que a imagem caiba dentro do elemento */
+  margin: 1rem auto; /* Centraliza a moeda */
+  display: block; /* Remove espaços extras */
 }
 
 .moeda:active {
@@ -440,7 +490,7 @@ button {
   100% { transform: scale(1); }
 }
 
-
+/* PERSONAGEM GERADO */
 .personagemgerado {
   margin-top: 2rem;
   background: #1a1a1a;
@@ -450,6 +500,8 @@ button {
   width: 100%;
   max-width: 500px;
 }
+
+/* MANUAL DE REGRAS */
 .manual-regras summary {
   cursor: pointer;
   font-weight: bold;
@@ -461,9 +513,10 @@ button {
   background-color: #1a1a1a6c;
   color: #f4f4f4;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-top: 0.5rem;
   font-family: 'Courier New', monospace;
+  font-size: 1rem; /* Ajuste no tamanho da fonte */
 }
 
 .manual-conteudo h3 {
@@ -477,22 +530,13 @@ button {
 }
 
 img {
-    width: 190px; /* ou qualquer tamanho que fique bom */
-    height: auto; /* mantém a proporção */
-
-    margin: auto;
-  }
-/* Paleta de cores */
-:root {
-  --cor-principal: #121012e3;        /* Cobre envelhecido – o sangue seco das máquinas esquecidas */
-  --cor-secundaria: #1b2c1b;       /* Profundezas ancestrais – onde as sombras sussurram runas perdidas */
-  --cor-destaque: #fff1b9;         /* Ouro sujo – reflexo de engrenagens antigas sob a luz do necrocristal */
-  --cor-acao: #bb4411;             /* Brasa encantada – a fúria do vapor em estado puro */
-  --musgo-antigo: #232e1eee;         /* Verde musgoso – memória viva das florestas que cantavam */
-  --vinho: #3c1818;                /* Néctar amaldiçoado – essência dos pactos esquecidos */
-  --cor-texto: #b9b8b6;            /* Pó das bibliotecas sagradas – onde a história resiste */
-  --cor-fundo: #00160cee;            /* Abismo arcano – véu da noite em que os autômatos choram */
+  width: 190px; /* Ou qualquer tamanho que fique bom */
+  height: auto; /* Mantém a proporção */
+  margin: auto;
+  display: block; /* Para centralizar corretamente */
 }
+
+/* MAPA */
 .mapa-container {
   position: relative;
   width: 100%;
@@ -536,6 +580,8 @@ img {
   border-radius: 8px;
   box-shadow: 0 0 10px #000c;
 }
+
+/* DETALHES DA CIDADE */
 .cidade-detalhe {
   border: 2px solid #654321;
   border-radius: 10px;
@@ -570,13 +616,14 @@ img {
   border-top: 1px solid #555;
 }
 
-/* Cores específicas para cada cidade */
+/* MENU DE LOCAIS */
 .menu-locais {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
+
 .botao-local.ativo {
   background-color: #333;
   color: #fff;
@@ -594,10 +641,19 @@ img {
   transition: all 0.2s ease;
   height: 40px;
   width: 70px;
+  text-align: center; /* Centraliza o texto dentro do botão */
 }
-.oculto{
+
+.botao-local:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+.oculto {
   display: none;
 }
+
+/* HISTÓRIA */
 .history-container {
   height: auto;
   width: 340px;
@@ -608,6 +664,7 @@ img {
   font-family: 'Georgia', serif;
   margin: 2rem 0;
 }
+
 .history-title {
   font-size: 2rem;
   color: #e2b714;
@@ -639,352 +696,267 @@ img {
   color: #dcdcdc;
 }
 
-.botao-local:hover {
-  background-color: #444;
-  transform: scale(1.05);
-}
-
-.cidade-detalhe {
-  border: 2px solid #654321;
-  border-radius: 10px;
-  background: #1e1e1e;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  
-}
-
-.cidade-titulo {
-  cursor: pointer;
-  padding: 1rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-  font-family: 'Cinzel Decorative', serif;
-  user-select: none;
-  
-}
-
-.card-cidade {
-  height: auto;
-  width: 310px;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  color: #f0e6d2;
-  background: rgba(255, 255, 255, 0.03);
-  border-top: 1px solid #555;
-}
-
-/* Cores personalizadas */
+/* CORES PERSONALIZADAS */
 .cor-ferrumia { color: #a02d3c; }
-.cor-nevoa    { color: #4682B4; }
+.cor-nevoa   { color: #4682B4; }
 .cor-calandra { color: #DAA520; }
 .cor-subvilin { color: #708090; }
 .cor-aramfeu  { color: #8B0000; }
 
-
-/* Container principal */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: var(--cor-fundo);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-.personagens-container{
-  width: 30%;
-  height: 60%;
-  max-width: 1200px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: auto;
-  padding: 20px;
-  background: var(--cor-fundo);
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  color: #a5a5a5;
-}
-.cardizinho{
-    width: 85%;
-    height: 70%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: var(--cor-principal);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    color: #fdefef;
-    font-size: larger;
-}
-details[open] p {
-    display: block;
-  }
-  details:not([open]) p {
-    display: none;
-  }
-  
-/* Estilização do cenário */
-
-
-/* Menu lateral */
-/* Cartas dos personagens */
+/* CONTAINER DE PERSONAGENS */
 .personagens-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;  
-    width: 500px;
-    height: 750px;
-    position: relative;
-    border: 8px solid var(--cor-secundaria);
-    border-radius: 16px;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    box-shadow: 0 0 25px var(--cor-fundo);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.card {
-    background: radial-gradient(circle, var(--cor-principal), var(--cor-secundaria));
-    border: 2px solid var(--cor-destaque);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(245, 166, 35, 0.5);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
-    max-width: 300px;
-    margin: 20px auto;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(245, 166, 35, 0.8);
-}
-
-/* Botões e interações */
-.btn {
-    background: var(--cor-acao);
-    color: var(--cor-texto);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background 0.3s;
-    display: inline-block;
-    margin: 10px auto;
-}
-
-.btn:hover {
-    background: #d48a14;
-    box-shadow: 0 0 10px rgba(245, 166, 35, 0.8);
-}
-
-/* Títulos temáticos */
-h1, h2, h3 {
-    font-family: 'IM Fell English SC', serif;
-    color: var(--cor-destaque);
-    text-shadow: 2px 2px 5px rgba(87, 3, 0, 0.5);
-    text-align: center;
-    margin: 20px auto;
-    max-width: 90%;
-}
-
-.bussola-container {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 999;
-  }
-  
-  .bussola {
-    width: 120px;
-    height: 120px;
-    border: 4px solid #59c61a;
-    border-radius: 50%;
-    position: relative;
-    background: radial-gradient(circle, #002500, #002516f3);
-    box-shadow: 0 0 15px #1ac65355;
-  }
-  
-  .bussola div {
-    position: absolute;
-    font-weight: bold;
-    color: #19924c;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .norte { top: 5px; left: 50%; transform: translateX(-50%); }
-  .sul { bottom: 5px; left: 50%; transform: translateX(-50%); }
-  .leste { right: 5px; top: 50%; transform: translateY(-50%); }
-  .oeste { left: 5px; top: 50%; transform: translateY(-50%); }
-  
-  .ponteiro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 50%;
-    background: #279719;
-    transform: translate(-50%, -100%);
-    transform-origin: bottom;
-    animation: girar 10s linear infinite;
-    opacity: 0.7;
-  }
-  .ponteiromenor{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 4px;
-    height: 30%;
-    background: #3ec983;
-    transform: translate(-50%, -100%);
-    transform-origin: bottom;
-    animation: girar 17s linear infinite;
-    opacity: 0.7;
-  }
-  .campanhas, .mercado {
-    margin-top: 30px;
-  }
-  .memory-counter {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  .missao {
-    background-color: #2e2e2e;
-    margin-bottom: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-    cursor: pointer;
-  }
-  .missao:hover {
-    background-color: #3a3a3a;
-  }
-  .missao.open {
-    background-color: #444;
-  }
-  .item {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #2e2e2e;
-    border-radius: 8px;
-  }
-  button {
-    padding: 8px 12px;
-    background-color: #e74c3c;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #c0392b;
-  }
-  @keyframes girar {
-    0% { transform: translate(-50%, -100%) rotate(0deg); }
-    100% { transform: translate(-50%, -100%) rotate(360deg); }
-  }
-  
-  .Engrenagens{
-    width: 70%;
-    height: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: var(--cor-fundo);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    color: #fdefef;
-    font-size: larger;
-  }
-/* 🔮 Responsividade mágica */
-
-/* ======= RESET GERAL E BASE ======= */
-
-
-/* TÍTULOS */
-h2, .campanha h2, .cartadobestiario-title {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 1rem;
-}
-
-/* CONTEINERZÃO */
-.conteinerzão {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 1rem 0;
-}
-
-/* IMAGENS DO BESTIÁRIO */
-.cartadobestiario-img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-}
-
-/* ÍCONES (Usando wrapper novo) */
-.icones-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.icone, .icone1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  background-color: #292929;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
-}
-
-.icone img, .icone1 img {
-  width: 80px;
-  height: auto;
-}
-
-/* MOEDA */
-.moeda {
-  width: 170px;
-  height: 170px;
-  object-fit: contain;
-}
-
-/* TEXTO CONEXÃO */
-.texto-conexao {
-  font-size: 1.3rem;
+  gap: 20px;
+  width: 500px;
+  height: 750px;
   position: relative;
+  border: 8px solid var(--cor-secundaria);
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0 0 25px var(--cor-fundo);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin: 20px auto; /* Centraliza o container */
+}
+
+/* CARD DE PERSONAGEM */
+.card {
+  background: radial-gradient(circle, var(--cor-principal), var(--cor-secundaria));
+  border: 2px solid var(--cor-destaque);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(245, 166, 35, 0.5);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(245, 166, 35, 0.8);
+}
+
+/* BOTÕES E INTERAÇÕES GERAIS */
+.btn {
+  background: var(--cor-acao);
+  color: var(--cor-texto);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.3s;
+  display: inline-block;
+  margin: 10px auto;
+}
+
+.btn:hover {
+  background: #d48a14;
+  box-shadow: 0 0 10px rgba(245, 166, 35, 0.8);
+}
+
+/* BÚSSOLA */
+.bussola-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+}
+
+.bussola {
+  width: 120px;
+  height: 120px;
+  border: 4px solid #59c61a;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(circle, #002500, #002516f3);
+  box-shadow: 0 0 15px #1ac65355;
+}
+
+.bussola div {
+  position: absolute;
+  font-weight: bold;
+  color: #19924c;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.norte { top: 5px; left: 50%; transform: translateX(-50%); }
+.sul { bottom: 5px; left: 50%; transform: translateX(-50%); }
+.leste { right: 5px; top: 50%; transform: translateY(-50%); }
+.oeste { left: 5px; top: 50%; transform: translateY(-50%); }
+
+.ponteiro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 50%;
+  background: #279719;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+  animation: girar 10s linear infinite;
+  opacity: 0.7;
+}
+
+.ponteiromenor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 30%;
+  background: #3ec983;
+  transform: translate(-50%, -100%);
+  transform-origin: bottom;
+  animation: girar 17s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes girar {
+  0% { transform: translate(-50%, -100%) rotate(0deg); }
+  100% { transform: translate(-50%, -100%) rotate(360deg); }
+}
+
+.campanhas, .mercado {
+  margin-top: 30px;
+}
+
+.memory-counter {
   text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-/* MERCADO */
-.mercado {
-  padding: 2rem;
-  background-color: #2d2d2d;
-  border-radius: 1rem;
+/* ENGENHOCAS */
+.Engrenagens {
+  width: 70%;
+  height: auto; /* Ajustado para auto para melhor responsividade */
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: var(--cor-fundo);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  color: #fdefef;
+  font-size: larger;
 }
 
-/* MANUAL */
-.manual-conteudo {
-  padding: 1.5rem;
-  font-size: 1rem;
-  background-color: #2c2c2c;
-  border-radius: 1rem;
+/* 🔮 RESPONSIVIDADE MÁGICA */
+
+/* PEQUENOS APARELHOS */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  h2, .campanha h2, .cartadobestiario-title {
+    font-size: 1.4rem;
+  }
+
+  .conteinerzão {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cartadobestiario-img {
+    height: 180px;
+  }
+
+  .icone, .icone1 {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  .icone img, .icone1 img {
+    width: 60px;
+  }
+
+  .moeda {
+    width: 100px;
+    height: 100px;
+  }
+
+  .texto-conexao {
+    font-size: 1.1rem;
+  }
+
+  .mercado, .manual-conteudo {
+    padding: 1rem;
+  }
+
+  .personagens-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .card {
+    max-width: 90%;
+  }
 }
+
+/* MÉDIOS APARELHOS (TABLETS) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .conteinerzão {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .icone, .icone1 {
+    font-size: 0.9rem;
+  }
+
+  .moeda {
+    width: 130px;
+    height: 130px;
+  }
+
+  .cartadobestiario-img {
+    height: 220px;
+  }
+
+  .mercado, .manual-conteudo {
+    padding: 1.2rem;
+  }
+
+  .personagens-container {
+    width: 70%;
+    height: auto;
+  }
+
+  .card {
+    max-width: 45%; /* Para exibir dois cards lado a lado em alguns tablets */
+  }
+}
+
+/* TELAS GRANDES */
+@media (min-width: 1025px) {
+  .conteinerzão {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .moeda {
+    width: 170px;
+    height: 170px;
+  }
+
+  .personagens-container {
+    width: 500px;
+    height: 750px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+}
+  
 
 
 /* ======= RESPONSIVIDADE ======= */
