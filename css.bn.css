@@ -242,57 +242,58 @@ details:not([open]) p {
 
 /* CONTEINERZÃO (Grid de itens) */
 .cardizinho {
-  background: #2c3e50; /* Fundo escuro, digno de um ambiente de vapor e ferro retorcido */
-  color: #ecf0f1; /* Texto suave, como o brilho da lâmpada de gás iluminando o caminho */
-  padding: 35px 40px; /* Um respiro de cada lado, como se fosse uma carta antiga com espaço para um grande conto */
-  border-radius: 12px; /* Bordas com leve suavidade, mas robustas, como um engrenagem que ainda tem muito pra girar */
-  max-width: 900px; /* Limita a largura, não queremos que o texto fuja das mãos do leitor */
-  margin: 50px auto; /* Centraliza a peça, como um relicário importante dentro de um velho museu */
-  font-family: 'Georgia', serif; /* Tipografia clássica, como se fosse o diário de um explorador */
-  font-size: 1.2rem; /* Perfeito pra longos textos, como se o leitor estivesse virando as páginas de um grimório */
-  line-height: 1.7; /* Espaço entre as linhas, mais arejado, dando mais ritmo à leitura */
-  text-align: justify; /* Justificado, dando aquela simetria clássica dos textos antigos, que não se perdem no papel */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Sombra intensa, como se o texto estivesse emergindo das profundezas das ferrovias */
-  border: 3px solid #c0392b; /* Bordas de cobre, um toque de vermelho enferrujado, pra lembrar o metal que pulsa no coração do jogo */
-  background-image: linear-gradient(135deg, rgba(44, 62, 80, 0.85), rgba(22, 22, 22, 0.85)); /* Gradiente de cobre, com a sensação de algo envelhecido, mas ainda vital */
-  overflow-y: auto; /* Se o texto crescer, que continue fluindo como um rio de ferro e vapor */
+  background: #3e3e3e; /* Fundo metálico, com um tom mais escuro, como a base do cobre corroído, mas com vida */
+  color: #f1c40f; /* Texto dourado, imitando o brilho do cobre queimado, que brilha sob a luz suave das lâmpadas de gás */
+  padding: 30px 40px; /* Espaçamento largo, como se fosse uma carta envelhecida entre duas camadas de metal */
+  border-radius: 12px; /* Bordas com suavidade, como se fosse uma peça forjada à mão */
+  max-width: 900px; /* Tamanho que equilibra o conteúdo, como se fosse uma jóia com o espaço perfeito para suas palavras */
+  margin: 50px auto; /* Centralizado, com aquele respiro no meio da tela, criando o ar de mistério */
+  font-family: 'Georgia', serif; /* Tipografia clássica, como se fosse um texto manuscrito de uma época passada */
+  font-size: 1rem; /* Diminuído para um tamanho mais sutil, mantendo a legibilidade e o clima intimista */
+  line-height: 1.6; /* Espaço entre as linhas, mais arejado, dando mais ritmo à leitura */
+  text-align: justify; /* Justificado, pra dar aquela sensação de ordem, como se cada palavra estivesse engrenada com a próxima */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Sombra suave, como se o texto estivesse sendo iluminado de forma misteriosa */
+  border: 3px solid #d35400; /* Borda de cobre brilhante, com o tom da ferrugem recém-queimada, como se estivesse vivo */
+  background-image: linear-gradient(45deg, rgba(44, 62, 80, 0.7), rgba(22, 22, 22, 0.7)); /* Um gradiente de cobre envelhecido, quase misterioso */
+  overflow-y: auto; /* Se o texto se expandir, que ele continue fluindo como um rio de cobre e vapor */
 }
 
 .cardizinho p {
-  margin-bottom: 25px; /* Espaço entre parágrafos, como se a história tivesse pausas dramáticas para fazer o jogador refletir */
+  margin-bottom: 20px; /* Espaço entre os parágrafos, como se cada novo pedaço da história fosse uma descoberta no labirinto */
 }
 
 .cardizinho h1, .cardizinho h2 {
-  font-family: 'Roboto Slab', serif; /* Cabeçalhos fortes, como se fossem engrenagens que dão o tom de ordem no caos */
-  color: #d35400; /* Laranja enferrujado, o tom do cobre aquecido nas fornalhas */
+  font-family: 'Roboto Slab', serif; /* Cabeçalhos mais robustos, como o aço e cobre trabalhando juntos nas engrenagens */
+  color: #e67e22; /* Laranja quente, como o tom de cobre resplandecente nas fornalhas de uma máquina antiga */
 }
 
 .cardizinho a {
-  color: #f39c12; /* Links como fios de cobre, chamando atenção, mas de maneira sutil */
-  text-decoration: none; /* Sem underline, mas com aquele charme discreto, como um bilhete secreto */
+  color: #f39c12; /* Link em tom de cobre dourado, chamando atenção como se fosse um fio de cobre correndo pela máquina */
+  text-decoration: none; /* Sem sublinhado, mas com a sutileza de um código secreto */
 }
 
 .cardizinho a:hover {
-  text-decoration: underline; /* Quando o link for tocado, ele revela um pouco de sua verdade oculta */
+  text-decoration: underline; /* Quando o link brilhar, ele revela sua conexão com o mundo escondido */
 }
 
 .cardizinho::before {
-  content: "⛓️"; /* Uma âncora ou corrente simbólica, como se fosse uma marca do velho mundo industrial */
-  font-size: 2rem;
-  color: #c0392b;
+  content: "⚒️"; /* Um símbolo de forja, como se fosse uma ferramenta de um mecânico steampunk criando algo novo */
+  font-size: 1.8rem; /* Tamanho um pouco menor, mas ainda marcante */
+  color: #c0392b; /* O tom de cobre escuro, quase oxidado, que se mistura com a alma da máquina */
   display: block;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .cardizinho::after {
-  content: "⚙️"; /* Um símbolo de engrenagem, porque nada em Raízes de Cobre funciona sem elas */
-  font-size: 2rem;
-  color: #e67e22;
+  content: "⚙️"; /* Engrenagem girando, como a última peça que conecta o fio da história com o futuro */
+  font-size: 1.8rem; /* Tamanho reduzido, mantendo o efeito visual interessante, mas sem perder o impacto */
+  color: #e67e22; /* A cor vibrante do cobre em alta temperatura, pronta para incendiar a próxima página da jornada */
   display: block;
   text-align: center;
   margin-top: 15px;
 }
+
 
 /* ÍCONES (Com wrapper para melhor organização) */
 .icones-wrapper {
