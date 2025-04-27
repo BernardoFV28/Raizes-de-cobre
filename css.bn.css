@@ -8,7 +8,7 @@ body.site1{
     background-position: center; /* Centraliza a bicha */
     background-repeat: no-repeat; /* Não repete */
     background-attachment: fixed;
-    font-size: clamp(1rem, 2vw, 1.5rem)
+    font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body.site2{
     background-position: center; /* Centraliza a bicha */
     background-repeat: no-repeat; /* Não repete */
     background-attachment: fixed;
-    font-size: clamp(1rem, 2vw, 1.5rem)
+    font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -52,7 +52,7 @@ body.site3{
     background-position: center; /* Centraliza a bicha */
     background-repeat: no-repeat; /* Não repete */
     background-attachment: fixed;
-    font-size: clamp(1rem, 2vw, 1.5rem)
+    font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 1.6;
     margin: 0;
     padding: 0;
