@@ -241,7 +241,7 @@ details:not([open]) p {
 }
 
 /* CONTEINERZÃO (Grid de itens) */
-.conteinerzão {
+.cardizinho {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -858,7 +858,7 @@ img {
     font-size: 1.4rem;
   }
 
-  .conteinerzão {
+  .cardizinho {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -905,7 +905,7 @@ img {
     padding: 1.5rem;
   }
 
-  .conteinerzão {
+  .cardizinho {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
@@ -938,7 +938,7 @@ img {
 
 /* TELAS GRANDES */
 @media (min-width: 1025px) {
-  .conteinerzão {
+  .cardizinho {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
@@ -959,89 +959,7 @@ img {
   
 
 
-/* ======= RESPONSIVIDADE ======= */
+/* ======= fim da RESPONSIVIDADE ======= */
 
-/* PEQUENOS APARELHOS */
-@media (max-width: 600px) {
-  body {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
 
-  h2, .campanha h2, .cartadobestiario-title {
-    font-size: 1.4rem;
-  }
-
-  .conteinerzão {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .cartadobestiario-img {
-    height: 180px;
-  }
-
-  .icone, .icone1 {
-    font-size: 0.85rem;
-    padding: 0.8rem;
-    
-  }
-
-  .icone img, .icone1 img {
-    width: 60px;
-  }
-
-  .moeda {
-    width: 100px;
-    height: 100px;
-  }
-
-  .texto-conexao {
-    font-size: 1.1rem;
-  }
-
-  .mercado, .manual-conteudo {
-    padding: 1rem;
-  }
-}
-
-/* MÉDIOS APARELHOS (TABLETS) */
-@media (min-width: 601px) and (max-width: 1024px) {
-  body {
-    padding: 1.5rem;
-  }
-
-  .conteinerzão {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-
-  .icone, .icone1 {
-    font-size: 0.9rem;
-  }
-
-  .moeda {
-    width: 130px;
-    height: 130px;
-  }
-
-  .cartadobestiario-img {
-    height: 220px;
-  }
-
-  .mercado, .manual-conteudo {
-    padding: 1.2rem;
-  }
-}
-
-/* TELAS GRANDES */
-@media (min-width: 1025px) {
-  .conteinerzão {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .moeda {
-    width: 170px;
-    height: 170px;
-  }
-}
   
