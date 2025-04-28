@@ -242,53 +242,53 @@ details:not([open]) p {
 
 /* CONTEINERZÃO (Grid de itens) */
 .cardizinho {
-  background: #3e3e3e; /* Fundo metálico, com um tom mais escuro, como a base do cobre corroído, mas com vida */
-  color: #f1c40f; /* Texto dourado, imitando o brilho do cobre queimado, que brilha sob a luz suave das lâmpadas de gás */
-  padding: 30px 40px; /* Espaçamento largo, como se fosse uma carta envelhecida entre duas camadas de metal */
-  border-radius: 12px; /* Bordas com suavidade, como se fosse uma peça forjada à mão */
-  max-width: 900px; /* Tamanho que equilibra o conteúdo, como se fosse uma jóia com o espaço perfeito para suas palavras */
-  margin: 50px auto; /* Centralizado, com aquele respiro no meio da tela, criando o ar de mistério */
-  font-family: 'Georgia', serif; /* Tipografia clássica, como se fosse um texto manuscrito de uma época passada */
-  font-size: 1rem; /* Diminuído para um tamanho mais sutil, mantendo a legibilidade e o clima intimista */
-  line-height: 1.6; /* Espaço entre as linhas, mais arejado, dando mais ritmo à leitura */
-  text-align: justify; /* Justificado, pra dar aquela sensação de ordem, como se cada palavra estivesse engrenada com a próxima */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Sombra suave, como se o texto estivesse sendo iluminado de forma misteriosa */
-  border: 3px solid #d35400; /* Borda de cobre brilhante, com o tom da ferrugem recém-queimada, como se estivesse vivo */
-  background-image: linear-gradient(45deg, rgba(44, 62, 80, 0.7), rgba(22, 22, 22, 0.7)); /* Um gradiente de cobre envelhecido, quase misterioso */
-  overflow-y: auto; /* Se o texto se expandir, que ele continue fluindo como um rio de cobre e vapor */
+  background: #1b1b1b; /* Fundo negro, com a textura úmida e viva de carne corroída pelo tempo */
+  color: #b9f2ff; /* Texto em azul pálido, quase espectral, como luz fantasmagórica vazando de um corpo morto */
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 50px auto;
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2); /* Sombra fria e enevoada, como vapor radioativo */
+  border: 3px solid #7f00ff; /* Roxo profundo — o sangue nobre dos decadentes da Ferrúmia */
+  background-image: linear-gradient(45deg, rgba(20, 20, 20, 0.9), rgba(5, 5, 5, 0.9)); /* Neblina negra esguichando nas fendas do metal */
+  overflow-y: auto;
 }
 
 .cardizinho p {
-  margin-bottom: 20px; /* Espaço entre os parágrafos, como se cada novo pedaço da história fosse uma descoberta no labirinto */
+  margin-bottom: 20px;
 }
 
 .cardizinho h1, .cardizinho h2 {
-  font-family: 'Roboto Slab', serif; /* Cabeçalhos mais robustos, como o aço e cobre trabalhando juntos nas engrenagens */
-  color: #e67e22; /* Laranja quente, como o tom de cobre resplandecente nas fornalhas de uma máquina antiga */
+  font-family: 'Roboto Slab', serif;
+  color: #ff1493; /* Rosa radioativo — a luz proibida que brilha nas catedrais mecânicas */
 }
 
 .cardizinho a {
-  color: #f39c12; /* Link em tom de cobre dourado, chamando atenção como se fosse um fio de cobre correndo pela máquina */
-  text-decoration: none; /* Sem sublinhado, mas com a sutileza de um código secreto */
+  color: #50fa7b; /* Verde bioluminescente de criatura do pântano elétrico */
+  text-decoration: none;
 }
 
 .cardizinho a:hover {
-  text-decoration: underline; /* Quando o link brilhar, ele revela sua conexão com o mundo escondido */
+  text-decoration: underline;
 }
 
 .cardizinho::before {
-  content: "⚒️"; /* Um símbolo de forja, como se fosse uma ferramenta de um mecânico steampunk criando algo novo */
-  font-size: 1.8rem; /* Tamanho um pouco menor, mas ainda marcante */
-  color: #c0392b; /* O tom de cobre escuro, quase oxidado, que se mistura com a alma da máquina */
+  content: "🧬"; /* Gene mutante — herança deformada da nova era */
+  font-size: 1.8rem;
+  color: #8a2be2; /* Roxo elétrico, cor da mutação e da rebelião */
   display: block;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .cardizinho::after {
-  content: "⚙️"; /* Engrenagem girando, como a última peça que conecta o fio da história com o futuro */
-  font-size: 1.8rem; /* Tamanho reduzido, mantendo o efeito visual interessante, mas sem perder o impacto */
-  color: #e67e22; /* A cor vibrante do cobre em alta temperatura, pronta para incendiar a próxima página da jornada */
+  content: "☠️"; /* Caveira cibernética — um sussurro do destino */
+  font-size: 1.8rem;
+  color: #dc143c; /* Vermelho carmim: paixão, sangue e ferrugem */
   display: block;
   text-align: center;
   margin-top: 15px;
