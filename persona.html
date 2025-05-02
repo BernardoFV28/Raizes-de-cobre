@@ -141,6 +141,175 @@
     </li>
   </div>
 </section>
+<div class="chat-container">
+  <div class="chat-box" id="chat-box">
+    <div class="message bot-message">Escolha um personagem para começar o chat!</div>
+  </div>
+  <div class="button-container">
+    <button onclick="iniciarChat('arauto')">Arauto N°7</button>
+    <button onclick="iniciarChat('eryon')">Eryon</button>
+    <button onclick="iniciarChat('valen')">Valen</button>
+    <button onclick="iniciarChat('zerys')">Zerys</button>
+    <button onclick="iniciarChat('coronel')">Coronel Rufino</button>
+    <button onclick="iniciarChat('dranemoi')">Dr. Anemoi</button>
+    <button onclick="iniciarChat('ivirik')">Ivirik</button>
+  </div>
+
+  <!-- Perguntas pré-definidas para o chat -->
+  <div id="perguntas">
+    <button onclick="enviarPergunta('Qual a sua origem?')">Qual a sua origem?</button>
+    <button onclick="enviarPergunta('Qual seu maior poder?')">Qual seu maior poder?</button>
+    <button onclick="enviarPergunta('O que você deseja alcançar?')">O que você deseja alcançar?</button>
+    <button onclick="enviarPergunta('Como você controla seu elemento?')">Como você controla seu elemento?</button>
+  </div>
+
+  <input type="text" id="user-input" placeholder="Ou digite sua pergunta..." />
+  <button onclick="enviarMensagem()">Enviar</button>
+</div>
+        <script>let personagemAtual = '';
+
+// Estrutura dos personagens com histórias mais fortes e perguntas personalizadas
+const personagens = {
+  "arauto": {
+    "nome": "Arauto N°7",
+    "elemento": "Água",
+    "fala_inicial": "Das profundezas abissais, emerge a voz que ecoa nas ondas... O Arauto N°7. E você está prestes a ouvir sua verdade.",
+    "respostas": [
+      {"pergunta": "Qual a sua origem?", "resposta": "Nasci do abismo gelado, onde a luz nunca tocou, onde a água é uma essência sem nome. Sou a voz do mar profundo, seu único e fiel arauto."},
+      {"pergunta": "Qual seu maior poder?", "resposta": "Sou a maré, imutável e feroz. Quando o mar me chama, nenhuma força humana pode resistir. Eu sou o que a tempestade guarda em seu coração."},
+      {"pergunta": "O que você deseja alcançar?", "resposta": "Não busco mais respostas, apenas o eco do meu próprio destino. Vou até onde a água me levar, para revelar a verdade escondida nas profundezas."},
+      {"pergunta": "Como você controla seu elemento?", "resposta": "A água não é minha ferramenta, ela é minha essência. Eu sou o rio, o mar, a tempestade... Eles fluem através de mim, e minha vontade é seu guia."}
+    ]
+  },
+  "eryon": {
+    "nome": "Eryon",
+    "elemento": "Fogo",
+    "fala_inicial": "Sente o calor? É o fogo que arde em minha alma. Mas cuidado... Não é um calor acolhedor.",
+    "respostas": [
+      {"pergunta": "Qual a sua origem?", "resposta": "Sou a chama que nunca se apaga, nascido do fogo primordial. Onde outros veem destruição, eu vejo renascimento. O fogo me escolheu como seu herdeiro."},
+      {"pergunta": "Qual seu maior poder?", "resposta": "Eu sou o fogo que consome tudo em seu caminho. Minha ira é como lava, destruidora e inclemente. Mas, por trás da chama, existe uma verdade ardente... a de que eu renasço sempre das cinzas."},
+      {"pergunta": "O que você deseja alcançar?", "resposta": "Quero entender a natureza do fogo, sua dança entre a vida e a morte. E, mais que isso, alcançar um poder que me permita moldá-lo conforme minha própria vontade."},
+      {"pergunta": "Como você controla seu elemento?", "resposta": "O fogo não se controla. Ele é uma força incontrolável, e eu sou sua chama viva. A cada sopro, o domínio se estende. Eu sou o fogo, e ele é parte de mim."}
+    ]
+  },
+  "valen": {
+    "nome": "Valen",
+    "elemento": "Cristal",
+    "fala_inicial": "Na pureza do cristal, repousa a verdade que muitos evitam encarar. Eu sou a transparência que revela o que o mundo não quer ver.",
+    "respostas": [
+      {"pergunta": "Qual a sua origem?", "resposta": "Forjado nas entrañas da terra, onde a luz nunca tocou, nasci do cristal que reflete todas as possibilidades. Cada faceta minha é um universo inteiro."},
+      {"pergunta": "Qual seu maior poder?", "resposta": "O cristal que criei pode ser impenetrável, mas o verdadeiro poder está em sua pureza. Eu posso transformar o cristal em qualquer forma... até mesmo em armaduras que podem resistir à eternidade."},
+      {"pergunta": "O que você deseja alcançar?", "resposta": "Proteger a verdade. Mostrar a beleza que é oculta aos olhos comuns. E, talvez, revelar que a verdadeira força vem da clareza."},
+      {"pergunta": "Como você controla seu elemento?", "resposta": "Eu sou o cristal e o cristal sou eu. Cada faceta minha reflete uma parte do todo. Eu comando suas formas porque compreendo sua essência."}
+    ]
+  },
+  "zerys": {
+    "nome": "Zerys",
+    "elemento": "Metal",
+    "fala_inicial": "Onde a destruição se encontra com a criação, ali estou eu. O metal que nunca quebra e a mente que nunca se desvia.",
+    "respostas": [
+      {"pergunta": "Qual a sua origem?", "resposta": "Fui criado no coração de fornalhas infinitas, no lugar onde a fusão entre a essência do ferro e do fogo se faz. Nascido do metal e da chama, minha alma nunca conheceu a fragilidade."},
+      {"pergunta": "Qual seu maior poder?", "resposta": "Sou o metal que nunca se dobra, a lâmina que nunca se quebra. Minha força é minha vontade, e meu poder é forjado em cada golpe que a vida me dá."},
+      {"pergunta": "O que você deseja alcançar?", "resposta": "Criar um império de ferro imbatível. Um mundo onde a resistência e a força governem, onde as fraquezas sejam forjadas e esquecidas."},
+      {"pergunta": "Como você controla seu elemento?", "resposta": "O metal não me obedece. Ele é minha extensão, meu reflexo. Eu o moldo, o faço seguir minha vontade, porque minha alma é mais dura que qualquer liga de ferro."}
+    ]
+  },
+  "coronel": {
+    "nome": "Coronel Rufino",
+    "elemento": "Água / Vapor",
+    "fala_inicial": "O vapor é a cortina que esconde minhas intenções. Às vezes, a névoa é minha aliada, e a guerra, meu campo de batalha.",
+    "respostas": [
+      {"pergunta": "Qual a sua origem?", "resposta": "Sou filho das águas turvas e das névoas impenetráveis. A guerra me moldou e a névoa é minha proteção. O vapor? O vapor é o que me mantém em movimento, invisível, imprevisível."},
+      {"pergunta": "Qual seu maior poder?", "resposta": "O vapor é invisível, mas poderoso. E como comandante, sou capaz de usar a névoa para disfarçar meus movimentos, atacar de onde ninguém espera. Meu maior poder é a mente estratégica que jamais erra."},
+      {"pergunta": "O que você deseja alcançar?", "resposta": "Vencer todas as batalhas, e no fim, ser lembrado como o líder que não apenas venceu a guerra, mas que a escreveu com sua própria tinta."},
+      {"pergunta": "Como você controla seu elemento?", "resposta": "O vapor não se controla com força bruta. Ele é a resposta à necessidade de adaptação. Eu sou o mestre das condições, e o vapor é o meu aliado."}
+    ]
+  },
+  "dranemoi": {
+    "nome": "Dr. Anemoi",
+    "elemento": "Dark / Vapor",
+    "fala_inicial": "Na escuridão e na neblina, encontro os segredos que o mundo não ousa revelar. E é lá que eu me alimento.",
+    "respostas": [
+      {"pergunta": "Qual a sua origem?", "resposta": "Nasci das trevas que o sol nunca viu, do silêncio que se esconde nas frestas da realidade. Sou a névoa que envolve a mente e a escuridão que nunca se desfaz."},
+      {"pergunta": "Qual seu maior poder?", "resposta": "Eu sou o mestre da mente e da percepção. O vapor não é apenas matéria, é ilusão. Eu posso moldar o que você vê, o que você acredita. E, no fim, o que você sente."},
+      {"pergunta": "O que você deseja alcançar?", "resposta": "Alcançar a perfeição da mente humana. Controlar os pensamentos, e, assim, o destino de todos ao meu redor. O controle é a única verdade."},
+      {"pergunta": "Como você controla seu elemento?", "resposta": "O vapor é como a mente humana: densa e maleável. Eu o comando com a mente, criando ilusões que distorcem a realidade e dissolvem a verdade."}
+    ]
+  },
+  "ivirik": {
+    "nome": "Ivirik",
+    "elemento": "Água",
+    "fala_inicial": "A tempestade que arrasa é apenas um reflexo de minha alma. Você não pode fugir da água... ela sempre encontra seu caminho.",
+    "respostas": [
+      {"pergunta": "Qual a sua origem?", "resposta": "Vim das profundezas que nenhum ser humano pode imaginar, onde as correntes não são meros fluxos, mas caminhos para outros mundos."},
+      {"pergunta": "Qual seu maior poder?", "resposta": "Eu sou a tempestade e a calmaria. O poder de causar destruição ou de trazer a paz, tudo com a força que a água me dá. Eu sou o equilíbrio entre o caos e a ordem."},
+      {"pergunta": "O que você deseja alcançar?", "resposta": "Desejo ser o guardião das águas que conectam todos os mundos. Quero trazer equilíbrio entre a criação e a destruição."},
+      {"pergunta": "Como você controla seu elemento?", "resposta": "A água não me obedece, eu sou a água. Em mim, ela se manifesta como uma força primordial, a única força verdadeira."}
+    ]
+  }
+};
+
+// Função de inicialização do chat com o personagem escolhido
+function iniciarChat(personagem) {
+  personagemAtual = personagem;
+  const chatBox = document.getElementById("chat-box");
+  chatBox.innerHTML = `<div class="message bot-message">${personagens[personagem].fala_inicial}</div>`;
+  document.getElementById("perguntas").style.display = 'block'; // Exibe as perguntas predefinidas
+}
+
+// Função para enviar perguntas e respostas
+function enviarPergunta(pergunta) {
+  const chatBox = document.getElementById("chat-box");
+  let respostaEncontrada = false;
+
+  // Mostra a pergunta
+  let userMessage = document.createElement('div');
+  userMessage.classList.add('message', 'user-message');
+  userMessage.textContent = pergunta;
+  chatBox.appendChild(userMessage);
+
+  // Procurando a resposta da pergunta no personagem
+  personagens[personagemAtual].respostas.forEach((item) => {
+    if (item.pergunta.toLowerCase() === pergunta.toLowerCase()) {
+      let botMessage = document.createElement('div');
+      botMessage.classList.add('message', 'bot-message');
+      botMessage.textContent = item.resposta;
+      chatBox.appendChild(botMessage);
+      respostaEncontrada = true;
+    }
+  });
+
+  if (!respostaEncontrada) {
+    let botMessage = document.createElement('div');
+    botMessage.classList.add('message', 'bot-message');
+    botMessage.textContent = "Desculpe, não tenho uma resposta para isso ainda...";
+    chatBox.appendChild(botMessage);
+  }
+
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Função para enviar uma mensagem personalizada
+function enviarMensagem() {
+  const userInput = document.getElementById("user-input").value;
+  if (userInput.trim()) {
+    const chatBox = document.getElementById("chat-box");
+    let userMessage = document.createElement('div');
+    userMessage.classList.add('message', 'user-message');
+    userMessage.textContent = userInput;
+    chatBox.appendChild(userMessage);
+
+    // Resposta do bot, caso a entrada seja válida
+    let botMessage = document.createElement('div');
+    botMessage.classList.add('message', 'bot-message');
+    botMessage.textContent = "Desculpe, não tenho uma resposta para isso ainda...";
+    chatBox.appendChild(botMessage);
+    
+    document.getElementById("user-input").value = '';
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+}
+</script>
 
     <footer class="raizes-footer">
   <div class="footer-glow"></div>
