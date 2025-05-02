@@ -1001,10 +1001,53 @@ img {
     max-width: 300px;
   }
 }
-  
-
-
 /* ======= fim da RESPONSIVIDADE ======= */
+.raizes-footer {
+  position: relative;
+  margin-left: 260px;
+  padding: 3rem 2rem;
+  background: radial-gradient(circle at top center, #1e0f1e 0%, #0e0e0e 100%);
+  color: #f8c5ff;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  border-top: 1px solid #ff85c1;
+  box-shadow: inset 0 10px 20px rgba(255, 133, 193, 0.05);
+}
+
+.raizes-footer span {
+  color: #ff4fcf;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px #ff85c1, 0 0 25px #b100b1;
+}
+
+.footer-glow {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 72, 204, 0.2) 0%, transparent 70%);
+  transform: translateX(-50%);
+  filter: blur(40px);
+  z-index: 0;
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
 
 
   
