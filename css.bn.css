@@ -889,6 +889,122 @@ img {
   color: #fdefef;
   font-size: larger;
 }
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.chat-box {
+  height: 300px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.bot-message {
+  color: #66ccff;
+}
+
+.user-message {
+  color: #ff6600;
+}
+
+input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container {
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
+
+#perguntas button {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #444;
+}
+
+#perguntas button:hover {
+  background-color: #333;
+}
+
+
+.raizes-footer {
+  position: relative;
+  margin-left: 260px;
+  padding: 3rem 2rem;
+  background: radial-gradient(circle at top center, #1e0f1e 0%, #0e0e0e 100%);
+  color: #f8c5ff;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  border-top: 1px solid #ff85c1;
+  box-shadow: inset 0 10px 20px rgba(255, 133, 193, 0.05);
+}
+
+.raizes-footer span {
+  color: #ff4fcf;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px #ff85c1, 0 0 25px #b100b1;
+}
+
+.footer-glow {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  width: 90%;
+  height: 10%;
+  background: radial-gradient(circle, rgba(255, 72, 204, 0.2) 0%, transparent 70%);
+  transform: translateX(-50%);
+  filter: blur(40px);
+  z-index: 0;
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
 
 /* 🔮 RESPONSIVIDADE MÁGICA */
 
@@ -1002,52 +1118,4 @@ img {
   }
 }
 /* ======= fim da RESPONSIVIDADE ======= */
-.raizes-footer {
-  position: relative;
-  margin-left: 260px;
-  padding: 3rem 2rem;
-  background: radial-gradient(circle at top center, #1e0f1e 0%, #0e0e0e 100%);
-  color: #f8c5ff;
-  font-family: 'Staatliches', cursive;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  text-align: center;
-  overflow: hidden;
-  z-index: 1;
-  border-top: 1px solid #ff85c1;
-  box-shadow: inset 0 10px 20px rgba(255, 133, 193, 0.05);
-}
-
-.raizes-footer span {
-  color: #ff4fcf;
-  font-weight: bold;
-  font-size: 1.3rem;
-  text-shadow: 0 0 10px #ff85c1, 0 0 25px #b100b1;
-}
-
-.footer-glow {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255, 72, 204, 0.2) 0%, transparent 70%);
-  transform: translateX(-50%);
-  filter: blur(40px);
-  z-index: 0;
-  animation: pulseGlow 4s infinite ease-in-out;
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.3;
-    transform: translateX(-50%) scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: translateX(-50%) scale(1.2);
-  }
-}
-
-
   
