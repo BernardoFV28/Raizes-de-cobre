@@ -894,7 +894,7 @@ img {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #111;
+  background-color: #000000;
   border-radius: 10px;
   color: white;
   font-family: 'Courier New', Courier, monospace;
@@ -905,7 +905,7 @@ img {
   overflow-y: scroll;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #222;
+  background-color: #140a00;
   border-radius: 8px;
 }
 
@@ -914,27 +914,27 @@ img {
 }
 
 .bot-message {
-  color: #66ccff;
+  color: #ff9d4d;
 }
 
 .user-message {
-  color: #ff6600;
+  color: #eb542e;
 }
 
 input {
   width: 70%;
   padding: 10px;
   border: none;
-  background-color: #333;
+  background-color: #080808;
   color: white;
   border-radius: 5px;
 }
 
 button {
   padding: 10px;
-  background-color: #ff6600;
+  background-color: #8f3a01;
   border: none;
-  color: white;
+  color: rgb(253, 205, 165);
   border-radius: 5px;
   cursor: pointer;
 }
@@ -944,23 +944,23 @@ button {
 }
 
 button:hover {
-  background-color: #e65c00;
+  background-color: #6b2b00;
 }
 
 #perguntas button {
   margin-top: 10px;
   width: 100%;
-  background-color: #444;
+  background-color: #000000;
 }
 
 #perguntas button:hover {
-  background-color: #333;
+  background-color: #110a00;
 }
 
 
 .raizes-footer {
   position: relative;
-  margin-left: 260px;
+  margin-left: 150px;
   padding: 3rem 2rem;
   background: radial-gradient(circle at top center, #1e0f1e 0%, #0e0e0e 100%);
   color: #f8c5ff;
@@ -975,10 +975,10 @@ button:hover {
 }
 
 .raizes-footer span {
-  color: #ff4fcf;
+  color: #ffc14f;
   font-weight: bold;
   font-size: 1.3rem;
-  text-shadow: 0 0 10px #ff85c1, 0 0 25px #b100b1;
+  text-shadow: 0 0 10px #ffd885, 0 0 25px #aeb100;
 }
 
 .footer-glow {
@@ -1118,4 +1118,3 @@ button:hover {
   }
 }
 /* ======= fim da RESPONSIVIDADE ======= */
-  
