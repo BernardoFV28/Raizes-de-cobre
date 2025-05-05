@@ -956,7 +956,7 @@ button:hover {
   position: relative;
   margin-left: 150px;
   padding: 3rem 2rem;
-  background: radial-gradient(circle at top center, #1e0f1e 0%, #0e0e0e 100%);
+  background: radial-gradient(circle at top center, #1e1a0f 0%, #0e0e0e 100%);
   color: #ffd2b8;
   font-family: 'Staatliches', cursive;
   font-size: 1.1rem;
@@ -965,7 +965,7 @@ button:hover {
   overflow: hidden;
   z-index: 1;
   border-top: 1px solid #492617;
-  box-shadow: inset 0 10px 20px rgba(255, 133, 193, 0.05);
+  box-shadow: inset 0 10px 20px rgba(255, 188, 133, 0.05);
 }
 
 .raizes-footer span {
@@ -998,6 +998,8 @@ button:hover {
     transform: translateX(-50%) scale(1.2);
   }
 }
+
+
 
 
 /* 🔮 RESPONSIVIDADE MÁGICA */
