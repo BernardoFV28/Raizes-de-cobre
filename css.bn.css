@@ -43,7 +43,13 @@ body.site3 {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
+body.site4 {
+  background-image: url("images/site4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 /* Paleta de cores */
 :root {
   --cor-principal: #121012e3;          /* Cobre envelhecido – o sangue seco das máquinas esquecidas */
@@ -258,11 +264,11 @@ details:not([open]) p {
 
 .cardizinho h1, .cardizinho h2 {
   font-family: 'Roboto Slab', serif;
-  color: #fffff; /* Rosa radioativo — a luz proibida que brilha nas catedrais mecânicas */
+  color: #331401; /* Rosa radioativo — a luz proibida que brilha nas catedrais mecânicas */
 }
 
 .cardizinho a {
-  color: #fffff; /* Verde bioluminescente de criatura do pântano elétrico */
+  color: #5c2e09; /* Verde bioluminescente de criatura do pântano elétrico */
   text-decoration: none;
 }
 
@@ -954,7 +960,7 @@ button:hover {
 
 .raizes-footer {
   position: relative;
-  margin-left: 1px;
+  margin-left: 150px;
   padding: 3rem 2rem;
   background: radial-gradient(circle at top center, #1e1a0f 0%, #0e0e0e 100%);
   color: #ffd2b8;
@@ -966,8 +972,6 @@ button:hover {
   z-index: 1;
   border-top: 1px solid #492617;
   box-shadow: inset 0 10px 20px rgba(255, 188, 133, 0.05);
-  width: 90%;
-  height: 10%;
 }
 
 .raizes-footer span {
@@ -982,7 +986,7 @@ button:hover {
   top: -50px;
   left: 50%;
   width: 100%;
-  height: 5%;
+  height: 10%;
   background: radial-gradient(circle, rgba(94, 69, 15, 0.2) 0%, transparent 70%);
   transform: translateX(-50%);
   filter: blur(40px);
@@ -1000,8 +1004,6 @@ button:hover {
     transform: translateX(-50%) scale(1.2);
   }
 }
-
-
 
 
 /* 🔮 RESPONSIVIDADE MÁGICA */
