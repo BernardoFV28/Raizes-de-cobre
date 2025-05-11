@@ -44,7 +44,7 @@ body.site3 {
   background-attachment: fixed;
 }
 body.site4 {
-  background-image: url("images/site4.png");
+  background-image: url("site4.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
