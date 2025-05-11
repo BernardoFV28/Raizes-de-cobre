@@ -262,7 +262,7 @@ details:not([open]) p {
 }
 
 .cardizinho a {
-  color: #5c2e09; /* Verde bioluminescente de criatura do pântano elétrico */
+  color: #fffff; /* Verde bioluminescente de criatura do pântano elétrico */
   text-decoration: none;
 }
 
@@ -954,7 +954,7 @@ button:hover {
 
 .raizes-footer {
   position: relative;
-  margin-left: 150px;
+  margin-left: 1px;
   padding: 3rem 2rem;
   background: radial-gradient(circle at top center, #1e1a0f 0%, #0e0e0e 100%);
   color: #ffd2b8;
